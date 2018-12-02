@@ -1,5 +1,5 @@
 # LSTM Model
-An improved deep neural model with bidirectional LSTM cells and one-dimensional convolutional layers.
+An improved deep neural model with bidirectional LSTM cells and one-dimensional convolutional layers. A pre-trained ```save/model.h5``` is provided.
 
 Originally written as a deep learning system to identify and classify toxic online comments. Heavily based on [work done by Gautam Mittal](https://github.com/gmittal/toxic-comments).
 
