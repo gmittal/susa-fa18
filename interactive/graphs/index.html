@@ -4,10 +4,16 @@
     <script src="//d3js.org/d3.v4.min.js"></script>
     <script src="visualization.js"></script>
     <script>
-        window.addEventListener('resize', function (event) {
-            $("#chart").width(window.innerWidth * 0.9);
-            $("#chart").height(window.innerHeight);
-        });     
+      function update(event) {
+        $("#chart").width(window.innerWidth * 1);
+        $("#chart").height(window.innerHeight * 1.1);
+      }
+      window.addEventListener('resize', update);
+      window.addEventListener('load', update);
+      window.addEventListener('message', function(event) {
+      console.log("RECEIVED");
+      update(event);
+      });
     </script>
 <select onchange="remakeChart()" id="label" style="margin-left:7px"></select>
 <div id="chart" style="width: 1600;height: 1200">
@@ -71,7 +77,8 @@
         };
         var groupChart = new horizontalGroupBarChart(barChartConfig)
     }
-
+    update();
+    console.log("Hello");
 
 </script>
 </body>
